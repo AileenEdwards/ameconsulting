@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AME Consulting — Leadership Development, DEIA Strategy & Executive Coaching</title>
+  <meta name="description" content="Leadership development, DEIA strategy, and executive coaching for organizations ready to build cultures of trust. Led by Aileen M. Edwards, MA, ACC — three decades of executive healthcare leadership.">
+  <meta property="og:title" content="AME Consulting — Leadership. Strategy. Culture that holds.">
+  <meta property="og:description" content="Leadership development, DEIA strategy, and executive coaching for organizations ready to build cultures of trust.">
+  <meta property="og:image" content="images/aileen-headshot-blazer.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          obsidian:'#1A1520', onyx:'#231E28', graphite:'#2D2735',
+          gold:{DEFAULT:'#C8A951', light:'#D4BA6A'},
+          cream:{DEFAULT:'#FAF7F2', dark:'#F0EBE1'},
+          silver:'#A8A8A8', ash:'#6B6B6B',
+          purple:{DEFAULT:'#9782A1', light:'#A995B3'},
+          plum:'#3A2C45'
+        },
+        fontFamily:{ display:['Fraunces','Georgia','serif'], body:['Sora','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="css/v10.css">
+</head>
+
+<body class="font-body bg-obsidian text-cream grain antialiased">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader">
+    <div class="preloader__count font-display">00</div>
+    <div class="preloader__bar"><i></i></div>
+    <div class="mt-6 eyebrow">AME Consulting</div>
+  </div>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav-shell fixed top-0 inset-x-0 z-50 py-5">
+    <div class="container-x flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo.png" alt="AME Consulting" class="h-9 w-auto" style="filter:brightness(0) invert(1)">
+        <span class="hidden sm:block font-display text-lg tracking-tight">AME&nbsp;Consulting</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-9 text-sm">
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="services-pricing.html" class="nav-link">Pricing</a>
+        <a href="index.html#bold" class="nav-link">BOLD&trade; Method</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <span class="magnetic" data-strength="0.5">
+          <a href="contact.html" class="btn btn-gold"><span>Let's Talk</span></a>
+        </span>
+      </div>
+      <button class="lg:hidden p-2 text-cream" data-menu-open aria-label="Open menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.4" d="M4 8h16M4 16h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- mobile menu -->
+  <div class="mobile-nav fixed inset-0 z-50 bg-obsidian/98 backdrop-blur-xl flex flex-col lg:hidden">
+    <div class="container-x flex items-center justify-between py-5">
+      <span class="font-display text-lg">AME Consulting</span>
+      <button class="p-2" data-menu-close aria-label="Close menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.4" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 flex flex-col justify-center gap-2 container-x">
+      <a href="about.html" class="font-display text-4xl py-3 border-b border-white/5">About</a>
+      <a href="services.html" class="font-display text-4xl py-3 border-b border-white/5">Services</a>
+      <a href="services-pricing.html" class="font-display text-4xl py-3 border-b border-white/5">Pricing</a>
+      <a href="index.html#bold" class="font-display text-4xl py-3 border-b border-white/5">BOLD&trade; Method</a>
+      <a href="contact.html" class="font-display text-4xl py-3 border-b border-white/5">Contact</a>
+      <a href="contact.html" class="btn btn-gold mt-8 self-start"><span>Book a 30-Minute Call</span></a>
+    </div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative min-h-[100svh] flex flex-col justify-end overflow-hidden">
+    <div class="hero-fallback" style="opacity:0;transition:opacity .6s"></div>
+    <canvas id="hero-canvas" style="opacity:0;transition:opacity 1.2s"></canvas>
+
+    <div class="relative z-10 container-x w-full pb-16 pt-40">
+      <div class="max-w-5xl">
+        <div class="eyebrow-rule mb-8 reveal" style="opacity:0">
+          <span class="eyebrow">Leadership · Strategy · Culture that holds</span>
+        </div>
+        <h1 class="display-xl text-cream text-balance" data-split="words" data-delay="0.2">
+          Your Best Leaders Are Still Auditioning for Belonging.
+        </h1>
+        <p class="mt-8 max-w-xl text-lg text-silver leading-relaxed reveal" style="opacity:0">
+          They're spending half their energy managing perception and the other half
+          considering their options. The culture conversations your team keeps avoiding?
+          They're already having them — just not with you.
+        </p>
+        <div class="mt-10 flex flex-wrap items-center gap-4 reveal" style="opacity:0">
+          <span class="magnetic" data-strength="0.4">
+            <a href="contact.html" class="btn btn-gold"><span>Book a 30-Minute Call</span>
+              <svg class="btn-arrow w-4 h-4 relative z-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </span>
+          <span class="magnetic" data-strength="0.4">
+            <a href="#services" class="btn btn-ghost"><span>See What I Fix</span></a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10 container-x w-full pb-10 flex items-center justify-between">
+      <span class="text-xs tracking-[0.3em] uppercase text-ash">Toronto · Ontario · Virtual</span>
+      <div class="scroll-cue"></div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST MARQUEE ============ -->
+  <section class="py-10 border-y border-white/5 bg-onyx/40 overflow-hidden">
+    <p class="container-x text-xs tracking-[0.3em] uppercase text-ash mb-6">Trusted by leaders inside</p>
+    <div data-marquee="left">
+      <div class="marquee">
+        <span class="marquee__item">CAMH</span>
+        <span class="marquee__item">Halton Children's Aid Society</span>
+        <span class="marquee__item">Queen's University</span>
+        <span class="marquee__item">Unity Health Toronto</span>
+        <span class="marquee__item">Quinte Health</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="py-28 lg:py-40 relative">
+    <div class="container-x grid lg:grid-cols-12 gap-12 items-start">
+      <div class="lg:col-span-4">
+        <div class="section-index sticky top-32">001 — The Problem</div>
+      </div>
+      <div class="lg:col-span-8">
+        <h2 class="display-lg text-balance mb-10">
+          <span class="line-mask"><span>Your leadership team is stuck.</span></span>
+          <span class="line-mask"><span class="gradient-gold">You can feel it.</span></span>
+        </h2>
+        <div class="space-y-6 text-lg text-silver leading-relaxed max-w-2xl" data-reveal-group>
+          <p class="reveal-up" style="opacity:0">Retention is slipping. Engagement surveys are getting worse.
+            Your best people are going quiet in meetings and active on LinkedIn.</p>
+          <p class="reveal-up" style="opacity:0">You've tried the training programs, the engagement initiatives, the town halls.
+            Nothing sticks because nobody's naming the real problem: your leaders are managing
+            <em class="text-cream not-italic font-medium">around</em> conflict instead of
+            <em class="text-cream not-italic font-medium">through</em> it.</p>
+          <p class="reveal-up font-display text-2xl text-cream italic" style="opacity:0">
+            Your culture isn't toxic. It's exhausted.</p>
+        </div>
+        <p class="pull-quote gradient-gold mt-16 max-w-3xl reveal" style="opacity:0">
+          What if you had a partner who has actually sat in your chair?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROI STATS ============ -->
+  <section class="py-24 bg-onyx/50 border-y border-white/5">
+    <div class="container-x">
+      <div class="eyebrow-rule mb-14"><span class="eyebrow">The Case for Doing the Work</span></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-14 gap-x-8" data-reveal-group>
+        <div class="reveal-up" style="opacity:0">
+          <div class="stat-number gold-text"><span data-count="700" data-suffix="%">0%</span></div>
+          <p class="mt-3 text-sm text-silver leading-relaxed">Median coaching ROI<br><span class="text-ash">ICF / HCI Study</span></p>
+        </div>
+        <div class="reveal-up" style="opacity:0">
+          <div class="stat-number gold-text"><span data-count="7" data-prefix="$" data-suffix="×">$0×</span></div>
+          <p class="mt-3 text-sm text-silver leading-relaxed">Return per $1 invested<br><span class="text-ash">Leadership Dev., Bersin</span></p>
+        </div>
+        <div class="reveal-up" style="opacity:0">
+          <div class="stat-number gold-text"><span data-count="4" data-suffix="×">0×</span></div>
+          <p class="mt-3 text-sm text-silver leading-relaxed">More likely to outperform<br><span class="text-ash">Strong pipeline, DDI</span></p>
+        </div>
+        <div class="reveal-up" style="opacity:0">
+          <div class="stat-number gold-text"><span data-count="25" data-suffix="%">0%</span></div>
+          <p class="mt-3 text-sm text-silver leading-relaxed">Higher profit margins<br><span class="text-ash">Diverse leadership, McKinsey</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (horizontal) ============ -->
+  <section id="services" class="relative" data-horizontal>
+    <div class="lg:h-[100svh] lg:flex lg:items-center overflow-hidden">
+      <div data-h-track class="lg:flex lg:items-stretch gap-6 lg:gap-8 lg:pl-[max(1.5rem,calc((100vw-80rem)/2+2rem))] lg:pr-24 grid sm:grid-cols-2 px-6 py-20 lg:py-0">
+        <!-- intro panel -->
+        <div class="lg:w-[34rem] shrink-0 flex flex-col justify-center pr-8 sm:col-span-2 lg:col-span-1">
+          <div class="section-index mb-5">002 — What I Do</div>
+          <h2 class="display-lg mb-6">You don't need another consultant.</h2>
+          <p class="text-silver text-lg leading-relaxed mb-8 max-w-md">You need someone who's been in your chair.
+            Four ways I build the leadership infrastructure organizations can't build alone.</p>
+          <a href="services.html" class="link-sweep text-base">Explore all services
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <!-- cards -->
+        <article class="tilt-card lg:w-[26rem] shrink-0 p-9 flex flex-col">
+          <div class="tilt-card__top -mx-9 -mt-9 mb-9"></div>
+          <span class="font-display text-5xl text-gold/30">01</span>
+          <h3 class="font-display text-3xl mt-6 mb-4">Leadership Development</h3>
+          <p class="text-silver leading-relaxed flex-1">Your managers were promoted for excellence, not trained for leadership.
+            I build programs that change how they lead — not just what they know.</p>
+          <a href="services.html#leadership" class="link-sweep mt-7">Explore Programs
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="tilt-card lg:w-[26rem] shrink-0 p-9 flex flex-col">
+          <div class="tilt-card__top -mx-9 -mt-9 mb-9"></div>
+          <span class="font-display text-5xl text-gold/30">02</span>
+          <h3 class="font-display text-3xl mt-6 mb-4">Executive Coaching</h3>
+          <p class="text-silver leading-relaxed flex-1">1:1 coaching for senior leaders burning energy performing instead of leading —
+            particularly women of colour navigating spaces that weren't built for them.</p>
+          <a href="services.html#coaching" class="link-sweep mt-7">Explore Coaching
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="tilt-card lg:w-[26rem] shrink-0 p-9 flex flex-col">
+          <div class="tilt-card__top -mx-9 -mt-9 mb-9"></div>
+          <span class="font-display text-5xl text-gold/30">03</span>
+          <h3 class="font-display text-3xl mt-6 mb-4">DEIA Consulting</h3>
+          <p class="text-silver leading-relaxed flex-1">Your DEIA commitments look great on paper. Your people can tell the difference.
+            I build strategy from lived experience — not slide decks.</p>
+          <a href="services.html#deia" class="link-sweep mt-7">Explore Strategy
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+
+        <article class="tilt-card lg:w-[26rem] shrink-0 p-9 flex flex-col justify-between glass">
+          <div>
+            <span class="eyebrow">When it's already a crisis</span>
+            <h3 class="font-display text-3xl mt-5 mb-4">Workplace Investigations</h3>
+            <p class="text-silver leading-relaxed">Independent investigations under Bill 168, the Human Rights Code, and OHSA —
+              legal rigour delivered with the sensitivity of someone who's sat in the CHRO seat.</p>
+          </div>
+          <a href="services.html#investigations" class="link-sweep mt-7">Board Governance · Culture Assessments
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOLD METHOD (kinetic pin) ============ -->
+  <section id="bold" class="relative bg-onyx/40 border-y border-white/5" data-bold>
+    <div class="bold-stage min-h-[100svh] flex items-center overflow-hidden">
+      <div class="container-x w-full grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="section-index mb-6">003 — The Method</div>
+          <h2 class="font-display text-5xl lg:text-6xl mb-6">The BOLD&trade; Method</h2>
+          <p class="pull-quote text-cream mb-2">Under pressure, you don't rise to the occasion.</p>
+          <p class="pull-quote gradient-gold mb-8">You fall back on who you've already practiced being.</p>
+          <div class="relative min-h-[7rem]">
+            <div class="bold-pillar absolute inset-0" style="opacity:0">
+              <span class="eyebrow">B — Becoming</span>
+              <p class="text-xl text-silver mt-3 max-w-md">Who are you when no one's watching?</p>
+            </div>
+            <div class="bold-pillar absolute inset-0" style="opacity:0">
+              <span class="eyebrow">O — Owning</span>
+              <p class="text-xl text-silver mt-3 max-w-md">What would you do if you stopped asking permission?</p>
+            </div>
+            <div class="bold-pillar absolute inset-0" style="opacity:0">
+              <span class="eyebrow">L — Leading</span>
+              <p class="text-xl text-silver mt-3 max-w-md">Can your leadership survive the room going quiet?</p>
+            </div>
+            <div class="bold-pillar absolute inset-0" style="opacity:0">
+              <span class="eyebrow">D — Disrupting</span>
+              <p class="text-xl text-silver mt-3 max-w-md">What if you stopped replicating the system that excluded you?</p>
+            </div>
+          </div>
+          <a href="services.html" class="link-sweep mt-10 inline-flex">How BOLD&trade; works inside organizations
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+        <div class="flex justify-center lg:justify-end gap-2 select-none" aria-hidden="true">
+          <span class="bold-letter">B</span><span class="bold-letter">O</span><span class="bold-letter">L</span><span class="bold-letter">D</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIAL ============ -->
+  <section class="py-28 lg:py-40">
+    <div class="container-x max-w-5xl">
+      <svg class="w-12 h-12 text-gold/40 mb-8" fill="currentColor" viewBox="0 0 24 24"><path d="M9.5 6C6.5 7.5 5 10 5 13v5h6v-6H8c0-2 .8-3.4 2.5-4.2L9.5 6zm9 0C15.5 7.5 14 10 14 13v5h6v-6h-3c0-2 .8-3.4 2.5-4.2L18.5 6z"/></svg>
+      <blockquote class="pull-quote text-balance reveal" style="opacity:0">
+        She has this rare ability to see your potential even when you can't see it yourself.</blockquote>
+      <div class="mt-10 flex items-center gap-4 reveal" style="opacity:0">
+        <div class="w-12 h-px bg-gold"></div>
+        <div>
+          <p class="font-medium text-cream">Linda Raynier</p>
+          <p class="text-sm text-ash">Author & Keynote Speaker · 2.6M+ LinkedIn Followers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT TEASER ============ -->
+  <section class="py-24 bg-onyx/40 border-y border-white/5 overflow-hidden">
+    <div class="container-x grid lg:grid-cols-2 gap-14 items-center">
+      <div class="relative rounded-2xl overflow-hidden noise-edge" data-parallax-wrap style="aspect-ratio:4/5">
+        <img src="images/aileen-headshot-blazer.jpg" alt="Aileen M. Edwards" data-parallax="10" class="absolute inset-0 w-full h-[120%] object-cover img-duotone">
+      </div>
+      <div>
+        <div class="section-index mb-6">004 — Who's Behind It</div>
+        <h2 class="display-lg text-balance mb-7">She built her career in rooms that weren't built for her.</h2>
+        <p class="text-lg text-silver leading-relaxed mb-8 max-w-xl">
+          Former CHRO. Three decades in healthcare boardrooms, union negotiations, and the culture
+          crises nobody wanted to touch. Now she builds the leadership infrastructure organizations
+          can't build alone.</p>
+        <div class="flex flex-wrap gap-3 mb-9">
+          <span class="glass rounded-full px-4 py-2 text-sm text-cream/90">MA Leadership</span>
+          <span class="glass rounded-full px-4 py-2 text-sm text-cream/90">ACC (ICF)</span>
+          <span class="glass rounded-full px-4 py-2 text-sm text-cream/90">RCC</span>
+          <span class="glass rounded-full px-4 py-2 text-sm text-cream/90">Crucial Conversations</span>
+          <span class="glass rounded-full px-4 py-2 text-sm text-cream/90">30+ Years Executive</span>
+        </div>
+        <div class="flex flex-wrap gap-4">
+          <a href="about.html" class="btn btn-ghost"><span>Her Full Story</span></a>
+          <a href="contact.html" class="link-sweep self-center">Book a Call
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOK TEASER ============ -->
+  <section class="py-28 lg:py-36">
+    <div class="container-x grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7">
+        <span class="eyebrow">Author · Speaker · Thought Leader</span>
+        <h2 class="display-lg text-balance mt-5 mb-7">The book that didn't exist until she wrote it.</h2>
+        <p class="text-lg text-silver leading-relaxed max-w-xl mb-8">
+          Not an inspirational memoir. A blueprint for leading at the intersection of race, gender,
+          and ambition — in systems that weren't designed for any of it.</p>
+        <p class="text-sm text-ash mb-8">Featured in <span class="text-cream">Executives Diary Magazine</span></p>
+        <div class="flex flex-wrap gap-4">
+          <a href="contact.html" class="btn btn-gold"><span>Get Notified at Launch</span></a>
+          <a href="contact.html" class="btn btn-ghost"><span>Book Aileen to Speak</span></a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="glass rounded-2xl p-10 text-center reveal" style="opacity:0">
+          <div class="aspect-[3/4] rounded-lg bg-gradient-to-br from-plum to-obsidian border border-gold/20 flex flex-col items-center justify-center p-8 mb-6">
+            <span class="eyebrow mb-4">Coming Soon</span>
+            <p class="font-display text-3xl text-cream leading-tight">Black Skin,<br>Bold Heart</p>
+            <p class="mt-6 text-sm text-silver">Aileen M. Edwards</p>
+          </div>
+          <p class="text-sm text-ash">A reckoning — and a blueprint for leading on your own terms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="relative py-32 lg:py-48 overflow-hidden border-t border-white/5">
+    <div class="hero-fallback" style="opacity:1"></div>
+    <div class="relative z-10 container-x text-center max-w-4xl">
+      <h2 class="display-xl text-balance mb-8" data-split="words" data-trigger="scroll">
+        Every month you wait, your best people are making plans you don't know about.</h2>
+      <p class="text-lg text-silver max-w-xl mx-auto mb-10 reveal" style="opacity:0">
+        One conversation. 30 minutes. I'll tell you exactly what I'd do differently —
+        whether you hire me or not.</p>
+      <div class="flex flex-wrap gap-4 justify-center reveal" style="opacity:0">
+        <span class="magnetic" data-strength="0.4">
+          <a href="contact.html" class="btn btn-gold"><span>Get a Candid Assessment — Free</span>
+            <svg class="btn-arrow w-4 h-4 relative z-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.6" d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </span>
+        <span class="magnetic" data-strength="0.4">
+          <a href="services.html" class="btn btn-ghost"><span>See What I Do</span></a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-obsidian border-t border-white/5 pt-20 pb-10">
+    <div class="container-x grid md:grid-cols-12 gap-12">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-3 mb-5">
+          <img src="images/logo.png" alt="AME Consulting" class="h-9 w-auto" style="filter:brightness(0) invert(1)">
+          <span class="font-display text-lg">AME Consulting</span>
+        </div>
+        <p class="font-display text-2xl text-cream/90 max-w-sm leading-snug">Leadership. Strategy. Culture that holds.</p>
+      </div>
+      <div class="md:col-span-3">
+        <p class="eyebrow mb-5">Explore</p>
+        <ul class="space-y-3 text-silver text-sm">
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="services-pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">About Aileen</a></li>
+          <li><a href="index.html#bold" class="nav-link">The BOLD&trade; Method</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <p class="eyebrow mb-5">Get in Touch</p>
+        <ul class="space-y-3 text-silver text-sm">
+          <li><a href="mailto:amedwards@ameconsulting.ca" class="nav-link">amedwards@ameconsulting.ca</a></li>
+          <li><a href="tel:+14167683612" class="nav-link">(416) 768-3612</a></li>
+          <li class="text-ash">Serving organizations across Ontario &amp; beyond</li>
+        </ul>
+        <div class="flex gap-4 mt-6">
+          <a href="https://www.linkedin.com/in/aileen-m-edwards" target="_blank" rel="noopener" class="w-10 h-10 rounded-full glass grid place-items-center hover:border-gold/40 transition" aria-label="LinkedIn">
+            <svg class="w-4 h-4 text-cream" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 100 3.5a2.5 2.5 0 004.98 0zM.4 8h4.2v12H.4V8zm7.2 0h4v1.6h.1c.6-1 1.9-2 3.9-2 4.2 0 5 2.7 5 6.2V20h-4.2v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V20H7.6V8z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/ame_consulting/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full glass grid place-items-center hover:border-gold/40 transition" aria-label="Instagram">
+            <svg class="w-4 h-4 text-cream" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1018.6 12 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1116.3 12 4.3 4.3 0 0112 16.3zm6.8-11.2a1.5 1.5 0 11-1.5-1.5 1.5 1.5 0 011.5 1.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container-x mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between gap-4 text-xs text-ash">
+      <span>© 2026 AME Consulting. All rights reserved.</span>
+      <span>Leadership Development · Executive Coaching · DEIA Strategy · Workplace Investigations</span>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/v10.js"></script>
+  <script type="module" src="js/hero.js"></script>
+</body>
+</html>
