@@ -1001,7 +1001,7 @@ ul.hr-consulting-ul {
 }
 
 .search-form-2 {
-    background-image: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/bgD_04.jpg);
+    background-image: url(../img/bgD_04.jpg);
     text-align: center;
     padding: 147px 228px 83px;
 }
@@ -1065,11 +1065,11 @@ ul.menu {
 }
 .inner-testimonial-sec:before {
     position: absolute;
-    content: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/test.png);
+    content: url(../img/test.png);
     top: -113px;
 }
 .inner-testimonial-sec:after {
-    content: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/quote.png);
+    content: url(../img/quote.png);
     position: absolute;
     right: 0;
     bottom: -147px;
@@ -2514,7 +2514,7 @@ ul.service-area-list li {
     width: 52px !important;
     height: 52px !important;
     text-indent: -999999px !important;
-    background: url(https://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/23038/theme/37212/img/arrow-1.png) 0 0px no-repeat !important;
+    background: url(../img/arrow-1.png) 0 0px no-repeat !important;
     border: none;
 }
 button.slick-next.slick-arrow {
@@ -2526,7 +2526,7 @@ button.slick-next.slick-arrow {
     width: 52px !important;
     height: 52px !important;
     text-indent: -999999px !important;
-    background: url(https://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/23038/theme/37212/img/arrow-2.png) 0 0px no-repeat !important;
+    background: url(../img/arrow-2.png) 0 0px no-repeat !important;
     border: none;
 }
 .section18.slick-initialized.slick-slider .section-subtitle{
@@ -2702,14 +2702,14 @@ top: 36%;
     content: url(../img/mobile%20(8).jpg);
 }    
  .coaching-mobile-banner img{
-  content: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/banner_022.jpg);     
+  content: url(../img/banner_022.jpg);     
 }   
 .blog-mobile-banner img {
- content: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/blogM.jpg);     
+ content: url(../img/blogM.jpg);     
 }   
 
 .hr-coaching-banner img {
- content: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/banner_02.jpg);         
+ content: url(../img/banner_02.jpg);         
 }
 
     .phone-holder {
@@ -2815,7 +2815,7 @@ h2.banner-title span {
     padding: 54px 61px 42px;
 }
 .outer-list.li-1 {
-    background-image: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/a_04.png);
+    background-image: url(../img/a_04.png);
     background-size: 100% 100%;
     cursor: pointer;
 }
@@ -2826,7 +2826,7 @@ h2.banner-title span {
     margin-bottom: 31px;
 }
 .outer-list.li-2 {
-    background-image: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/a_07.png);
+    background-image: url(../img/a_07.png);
     background-size: 100% 100%;
     cursor: pointer;
 }
@@ -2835,7 +2835,7 @@ h2.banner-title span {
 .search-form-2 {
     background-size: 100% 100%;
     padding: 69px 79px 41px;
-    background-image: url(http://s3-ap-southeast-1.amazonaws.com/assets-powerstores-com/data/org/24712/theme/41392/img/s_02.jpg);
+    background-image: url(../img/s_02.jpg);
 }
 .call-us {
 background-image: url("../img/m_02.jpg");
