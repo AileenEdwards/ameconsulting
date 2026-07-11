@@ -68,27 +68,6 @@
     });
   }
 
-  /* ---------------------------------------------------------
-     2. CUSTOM CURSOR
-     --------------------------------------------------------- */
-  function initCursor() {
-    if (REDUCED || TOUCH || !hasGSAP) return;
-    const dot = document.createElement('div'); dot.className = 'cursor-dot';
-    const ring = document.createElement('div'); ring.className = 'cursor-ring';
-    document.body.append(dot, ring);
-    document.body.classList.add('cursor-custom');
-    const xDot = gsap.quickTo(dot, 'x', { duration: 0.15, ease: 'power3' });
-    const yDot = gsap.quickTo(dot, 'y', { duration: 0.15, ease: 'power3' });
-    const xRing = gsap.quickTo(ring, 'x', { duration: 0.45, ease: 'power3' });
-    const yRing = gsap.quickTo(ring, 'y', { duration: 0.45, ease: 'power3' });
-    window.addEventListener('mousemove', (e) => {
-      xDot(e.clientX); yDot(e.clientY); xRing(e.clientX); yRing(e.clientY);
-    });
-    document.querySelectorAll('a, button, .tilt-card, [data-cursor]').forEach((el) => {
-      el.addEventListener('mouseenter', () => ring.classList.add('is-hover'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('is-hover'));
-    });
-  }
 
   /* ---------------------------------------------------------
      3. MAGNETIC BUTTONS
@@ -281,32 +260,7 @@
   }
 
   /* ---------------------------------------------------------
-     11. BOLD kinetic pin (landing only)
-     --------------------------------------------------------- */
-  function initBold() {
-    const section = document.querySelector('[data-bold]');
-    if (!section || REDUCED || !hasGSAP || !window.ScrollTrigger) {
-      // reveal pillars statically
-      document.querySelectorAll('[data-bold] .bold-pillar').forEach((p) => { p.style.opacity = 1; });
-      document.querySelectorAll('[data-bold] .bold-letter').forEach((l) => l.classList.add('is-filled'));
-      return;
-    }
-    const letters = section.querySelectorAll('.bold-letter');
-    const pillars = section.querySelectorAll('.bold-pillar');
-    const tl = gsap.timeline({
-      scrollTrigger: { trigger: section, start: 'top top', end: '+=' + (pillars.length * 60) + '%', scrub: 1, pin: '.bold-stage' }
-    });
-    letters.forEach((letter, i) => {
-      tl.to(letter, { className: 'bold-letter is-filled', duration: 0.4 }, i * 1);
-      if (pillars[i]) {
-        tl.fromTo(pillars[i], { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4 }, i * 1);
-        if (pillars[i - 1]) tl.to(pillars[i - 1], { opacity: 0.15, duration: 0.3 }, i * 1);
-      }
-    });
-  }
-
-  /* ---------------------------------------------------------
-     12. Horizontal scroll services (landing)
+     11. Horizontal scroll services (landing)
      --------------------------------------------------------- */
   function initHorizontal() {
     const wrap = document.querySelector('[data-horizontal]');
@@ -329,7 +283,6 @@
     if (hasGSAP && window.SplitText) gsap.registerPlugin(SplitText);
 
     initLenis();
-    initCursor();
     initNav();
     initMagnetic();
     initSplitHeadlines();
@@ -338,7 +291,6 @@
     initMarquee();
     initTilt();
     initParallax();
-    initBold();
     initHorizontal();
 
     if (hasGSAP && window.ScrollTrigger) {
