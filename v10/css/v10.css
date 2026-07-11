@@ -230,15 +230,6 @@ body.cursor-custom a, body.cursor-custom button { cursor: none; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 
-/* ---------- BOLD kinetic ---------- */
-.bold-letter {
-  font-family: 'Fraunces', serif; font-weight: 600;
-  font-size: clamp(7rem, 26vw, 22rem); line-height: 0.8;
-  color: transparent; -webkit-text-stroke: 1px rgba(200,169,81,0.45);
-  letter-spacing: -0.04em; will-change: transform;
-}
-.bold-letter.is-filled { color: var(--gold); -webkit-text-stroke: 0; }
-
 /* ---------- Pull quote ---------- */
 .pull-quote {
   font-family: 'Fraunces', serif; font-style: italic; font-weight: 400;
