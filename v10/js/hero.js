@@ -23,6 +23,13 @@ if (!canvas || reduced) {
   }
 }
 
+/* Palette comes from the CSS RGB-triplet variables (see v10.css :root
+   and themes.css) so the shader follows the active colour theme. */
+function cssColor(name) {
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim().split(/\s+/).map(Number);
+  return new THREE.Color(`rgb(${v[0]}, ${v[1]}, ${v[2]})`);
+}
+
 function boot() {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
   renderer.setClearColor(0x000000, 0);
@@ -38,11 +45,28 @@ function boot() {
     u_mouse: { value: new THREE.Vector2(0.5, 0.5) },
     u_mouseV: { value: 0 },
     // palette
-    u_obsidian: { value: new THREE.Color('#1A1520') },
-    u_plum: { value: new THREE.Color('#3A2C45') },
-    u_purple: { value: new THREE.Color('#9782A1') },
-    u_gold: { value: new THREE.Color('#C8A951') }
+    u_obsidian: { value: cssColor('--c-obsidian') },
+    u_plum: { value: cssColor('--c-plum') },
+    u_purple: { value: cssColor('--c-purple') },
+    u_gold: { value: cssColor('--c-gold') },
+    u_vig: { value: 0.45 }
   };
+
+  // On light backgrounds the heavy corner vignette reads as dirt — soften it.
+  const setVignette = () => {
+    const c = uniforms.u_obsidian.value;
+    const lum = 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b;
+    uniforms.u_vig.value = lum > 0.5 ? 0.12 : 0.45;
+  };
+  setVignette();
+
+  window.addEventListener('themechange', () => {
+    uniforms.u_obsidian.value.copy(cssColor('--c-obsidian'));
+    uniforms.u_plum.value.copy(cssColor('--c-plum'));
+    uniforms.u_purple.value.copy(cssColor('--c-purple'));
+    uniforms.u_gold.value.copy(cssColor('--c-gold'));
+    setVignette();
+  });
 
   const vert = /* glsl */`
     varying vec2 vUv;
@@ -57,6 +81,7 @@ function boot() {
     uniform vec2  u_mouse;
     uniform float u_mouseV;
     uniform vec3  u_obsidian, u_plum, u_purple, u_gold;
+    uniform float u_vig;
 
     // --- hash + value noise + fbm ---
     vec2 hash2(vec2 p){
@@ -109,9 +134,9 @@ function boot() {
       float g = (hash2(uv*u_res).x) * 0.025;
       col += g;
 
-      // vignette
+      // vignette (softened on light themes via u_vig)
       float vig = smoothstep(1.25, 0.25, distance(uv, vec2(0.5)));
-      col *= 0.55 + 0.45*vig;
+      col *= (1.0 - u_vig) + u_vig*vig;
 
       gl_FragColor = vec4(col, 1.0);
     }
