@@ -1,38 +1,59 @@
-# AME Consulting Website Guide
+<div align="center">
 
-Hi Aileen! This is your go-to guide for everything about your website. How to change it, how to undo anything, where your logins are, and how it all works. No tech experience needed.
+<img src="v10/images/ame-logo-circle.png" alt="AME Consulting logo" width="96">
 
-**What's in this guide:**
+# Your Website Owner's Manual
 
-1. [Why you can never permanently break your website](#1-why-you-can-never-permanently-break-your-website)
-2. [What GitHub is, and why your website lives there](#2-what-github-is-and-why-your-website-lives-there)
-3. [Set up Claude and GitHub (you only do this once)](#3-set-up-claude-and-github-you-only-do-this-once)
-4. [How to write a change request that Claude gets right the first time](#4-how-to-write-a-change-request-that-claude-gets-right-the-first-time)
-5. [Copy-paste examples for the most common changes](#5-copy-paste-examples-for-the-most-common-changes)
-6. [How to check that your change is live](#6-how-to-check-that-your-change-is-live)
-7. [Where to find the history of every change in GitHub](#7-where-to-find-the-history-of-every-change-in-github)
-8. [How to undo a change and go back to an earlier version](#8-how-to-undo-a-change-and-go-back-to-an-earlier-version)
-9. [Five rules that make every update go smoothly](#9-five-rules-that-make-every-update-go-smoothly)
-10. [Your account logins, all in one place](#10-your-account-logins-all-in-one-place)
-11. [Your domain and your email](#11-your-domain-and-your-email)
-12. [Need help? Contact Izzy](#12-need-help-contact-izzy)
-13. [Technical reference (for developers)](#13-technical-reference-for-developers)
+**[ameconsulting.ca](https://ameconsulting.ca)**
+
+Everything you need to run your website, written in plain English.
+
+*Change anything. Undo anything. Never lose anything.*
+
+</div>
 
 ---
 
-## 1. Why you can never permanently break your website
+## 🧭 What is this document?
+
+Hi Aileen! This is the owner's manual for your website. It lives right here, next to the website files themselves, so it can never get lost.
+
+It answers three big questions:
+
+1. **How do I change my website?** You chat with Claude. This guide shows you exactly how, with examples you can copy.
+2. **What if I mess something up?** You can't, not permanently. Every version of your site is saved forever. This guide shows you how to undo anything.
+3. **Where is everything?** Your logins, your domain, your email settings. All listed at the bottom.
+
+**In a hurry? Jump straight to what you need:**
+
+| You want to... | Go to |
+|---|---|
+| Change something on the site | [The recipe](#recipe) and [copy-paste examples](#examples) |
+| Undo a change | [Undo anything](#undo) |
+| See what changed and when | [The history](#history) |
+| Find a login or password link | [Your logins](#logins) |
+| Set up Claude for the first time | [One-time setup](#setup) |
+| Get help from a human | [Contact Izzy](#help) |
+
+---
+
+<a id="breathe"></a>
+
+## 🛟 First, breathe: you cannot break your website
 
 Every time your website changes, a snapshot of the whole site gets saved. Automatically. Those snapshots last forever.
 
-So if a change ever looks wrong, we go back to an earlier snapshot. That takes five minutes.
+If a change ever looks wrong, we go back to an earlier snapshot. That takes five minutes.
 
 The worst case is never "the site is ruined." The worst case is "we undo it."
 
-Keep that in mind while you read the rest. You can experiment without fear.
+So experiment freely. This whole system was built so you can't lose anything.
 
 ---
 
-## 2. What GitHub is, and why your website lives there
+<a id="github"></a>
+
+## 🗄️ What GitHub is, and why your website lives there
 
 GitHub is a website where people store files for projects. Your website's files are stored there, in a project called **ameconsulting**. Here's the address: [github.com/AileenEdwards/ameconsulting](https://github.com/AileenEdwards/ameconsulting). It belongs to your account.
 
@@ -46,9 +67,11 @@ The note on each snapshot matters. It's how you can look back and know "oh, that
 
 ---
 
-## 3. Set up Claude and GitHub (you only do this once)
+<a id="setup"></a>
 
-If this part feels confusing, do it with Izzy on a call. It takes five minutes.
+## 🚀 One-time setup (five minutes, once, ever)
+
+If this part feels confusing, do it with Izzy on a call.
 
 1. **Get Claude.** Go to [claude.ai](https://claude.ai) and sign in. Or download the Claude app on your phone. Your phone works fine for all of this.
 2. **Find your GitHub login.** Your username is **AileenEdwards**. Lost the password? Click "Forgot password" on github.com and it emails you a reset.
@@ -56,11 +79,13 @@ If this part feels confusing, do it with Izzy on a call. It takes five minutes.
 
 ---
 
-## 4. How to write a change request that Claude gets right the first time
+<a id="recipe"></a>
+
+## ✍️ The recipe: how to ask for a change
 
 Claude is smart. But it can't read your mind. Specific requests get perfect results. Vague requests get guesses.
 
-Every request needs four things:
+Every request needs four ingredients:
 
 1. **The page.** Homepage, About, Services, Speaking, or Contact.
 2. **The spot.** "Near the top." "The section with my book." "The footer."
@@ -77,14 +102,16 @@ Here's the fill-in-the-blank template:
 
 **Good request:** "On the Services page, under Executive Coaching, one card says 'Bi-Weekly Sessions.' Please change it to 'Weekly Sessions.' Screenshot attached."
 
-Two more habits that help:
+Two habits that make everything smoother:
 
 - **One change at a time.** Ten changes in one message is where mistakes happen.
-- **Use Plan mode.** In Claude Code there's a setting called Plan mode. Turn it on. Claude will explain its plan first, you approve it, then it makes the change.
+- **Use Plan mode.** It's a setting in Claude Code. Turn it on. Claude explains its plan first, you approve it, then it makes the change.
 
 ---
 
-## 5. Copy-paste examples for the most common changes
+<a id="examples"></a>
+
+## 📋 Copy-paste examples for common changes
 
 These use real parts of your site. Copy any prompt, change the details, and send it to Claude.
 
@@ -102,7 +129,7 @@ These use real parts of your site. Copy any prompt, change the details, and send
 
 **Change one of the signature talks:**
 
-> On the Speaking page, under Signature Talks, the talk called "Upholding Boundaries Is a Business Strategy" needs a new description. Please replace its current paragraph with this: [paste your new paragraph]
+> On the Speaking page, under Signature Talks, the talk called "Leading with Confidence, Clarity, and Executive Presence" needs a new description. Please replace its current paragraph with this: [paste your new paragraph]
 
 **Swap a photo:**
 
@@ -134,7 +161,9 @@ These use real parts of your site. Copy any prompt, change the details, and send
 
 ---
 
-## 6. How to check that your change is live
+<a id="check"></a>
+
+## ✅ Check that your change is live
 
 After Claude says it's done:
 
@@ -148,7 +177,9 @@ If something's not right, just tell Claude. Like you'd tell a person:
 
 ---
 
-## 7. Where to find the history of every change in GitHub
+<a id="history"></a>
+
+## 🕰️ See the history of every change
 
 Want to know what changed and when? Here is the exact path, click by click:
 
@@ -162,7 +193,9 @@ Nothing on this page can break anything. It's read-only. Look around freely.
 
 ---
 
-## 8. How to undo a change and go back to an earlier version
+<a id="undo"></a>
+
+## ⏪ Undo anything
 
 **Option A: Ask Claude. This is the way to do it 99% of the time.**
 
@@ -170,7 +203,7 @@ If the change was recent, describe it:
 
 > Please undo the change from earlier today that reworded the Executive Coaching section on the Services page. Put it back exactly how it was.
 
-If you want to go back to a specific snapshot, get its ID from the history page (Section 7, step 5), and say:
+If you want to go back to a specific snapshot, get its ID from the [history page](#history), and say:
 
 > Please restore my website to snapshot df73900. That version was correct.
 
@@ -190,7 +223,9 @@ If anything feels stuck, stop. Send Izzy a message with a screenshot. Going back
 
 ---
 
-## 9. Five rules that make every update go smoothly
+<a id="rules"></a>
+
+## 🏅 The five golden rules
 
 1. One change at a time.
 2. Name the page, the spot, the old words, and the new words.
@@ -200,7 +235,9 @@ If anything feels stuck, stop. Send Izzy a message with a screenshot. Going back
 
 ---
 
-## 10. Your account logins, all in one place
+<a id="logins"></a>
+
+## 🔑 Your account logins, all in one place
 
 | Account | Link | What it's for |
 |---|---|---|
@@ -212,7 +249,9 @@ If anything feels stuck, stop. Send Izzy a message with a screenshot. Going back
 
 ---
 
-## 11. Your domain and your email
+<a id="domain"></a>
+
+## 🌐 Your domain and your email
 
 Your domain (`ameconsulting.ca`) and your professional email (`@ameconsulting.ca`) are both managed through **Network Solutions**.
 
@@ -236,7 +275,9 @@ Your emails, contacts, and files all stay exactly as they are. Full instructions
 
 ---
 
-## 12. Need help? Contact Izzy
+<a id="help"></a>
+
+## 🙋 Need a human? Contact Izzy
 
 Reach out to **Izzy Piyale-Sheard** anytime:
 
@@ -245,7 +286,9 @@ Reach out to **Izzy Piyale-Sheard** anytime:
 
 ---
 
-## 13. Technical reference (for developers)
+<a id="tech"></a>
+
+## 🔧 Technical reference (for developers)
 
 *If a developer or web professional ever needs to know how your website is set up, point them here.*
 
@@ -258,3 +301,9 @@ Reach out to **Izzy Piyale-Sheard** anytime:
 | **Email** | Google Workspace via Network Solutions reseller |
 | **Live URL** | [ameconsulting.ca](https://ameconsulting.ca) |
 | **Social preview image** | `v10/images/og-image.jpg`, regenerate from `v10/images/og-card-source.html` |
+
+<div align="center">
+
+*Made with care for Aileen M. Edwards · AME Consulting*
+
+</div>
