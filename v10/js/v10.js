@@ -117,8 +117,13 @@
      5. HEADLINE split reveal (SplitText if available)
      --------------------------------------------------------- */
   function initSplitHeadlines() {
-    if (REDUCED || !hasGSAP) return;
-    document.querySelectorAll('[data-split="words"]').forEach((el) => {
+    const els = document.querySelectorAll('[data-split="words"]');
+    if (REDUCED || !hasGSAP) {
+      // no animation: just make the headlines visible
+      els.forEach((el) => { el.style.opacity = 1; });
+      return;
+    }
+    els.forEach((el) => {
       let words;
       if (window.SplitText) {
         const s = new SplitText(el, { type: 'words', wordsClass: 'split-word' });
@@ -130,6 +135,7 @@
       }
       const delay = parseFloat(el.dataset.delay || '0');
       gsap.set(words, { yPercent: 115, opacity: 0 });
+      el.style.opacity = 1; // words are hidden now; safe to show the container without a flash
       gsap.to(words, {
         yPercent: 0, opacity: 1, duration: 1.1, ease: 'power4.out', stagger: 0.055, delay,
         scrollTrigger: el.dataset.trigger === 'scroll'
