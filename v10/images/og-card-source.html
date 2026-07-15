@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1200px; height:630px; overflow:hidden; }
+  body {
+    position:relative;
+    background:
+      radial-gradient(900px 500px at 88% 0%, rgba(220,209,223,.55), transparent 62%),
+      radial-gradient(700px 420px at 0% 100%, rgba(139,35,70,.08), transparent 60%),
+      #F2F2F2;
+    font-family:'Sora',sans-serif;
+    color:#2D2D2D;
+  }
+  /* thin burgundy frame line for a finished feel */
+  .frame { position:absolute; inset:22px; border:1px solid rgba(139,35,70,.28); pointer-events:none; }
+
+  .left { position:absolute; left:84px; top:78px; width:660px; }
+
+  .brand { display:flex; align-items:center; gap:18px; margin-bottom:52px; }
+  .brand img { width:54px; height:54px; border-radius:50%; }
+  .brand span {
+    font-size:17px; font-weight:500; letter-spacing:.34em; text-transform:uppercase;
+    color:#8B2346;
+  }
+
+  h1 {
+    font-family:'Fraunces',Georgia,serif; font-weight:400;
+    font-size:73px; line-height:1.04; letter-spacing:-0.015em;
+    font-optical-sizing:auto;
+  }
+  h1 .accent { font-style:italic; color:#8B2346; }
+
+  .sub {
+    margin-top:34px; font-size:19px; font-weight:400; color:#554A5B; line-height:1.6;
+  }
+  .sub b { font-weight:600; color:#2D2D2D; }
+
+  .site {
+    position:absolute; left:84px; bottom:64px;
+    display:flex; align-items:center; gap:16px;
+    font-size:16px; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:#2D2D2D;
+  }
+  .site::before { content:''; width:46px; height:2px; background:#8B2346; }
+
+  /* portrait in an arch, with a thin offset arch outline echoing it */
+  .arch-ring {
+    position:absolute; right:78px; bottom:0; width:356px; height:552px;
+    border-radius:178px 178px 0 0;
+    border:2px solid rgba(139,35,70,.6);
+    border-bottom:none;
+  }
+  .arch {
+    position:absolute; right:96px; bottom:0; width:356px; height:530px;
+    border-radius:178px 178px 0 0;
+    overflow:hidden;
+    background:#DCD1DF;
+  }
+  .arch img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+</style>
+</head>
+<body>
+  <div class="frame"></div>
+
+  <div class="left">
+    <div class="brand">
+      <img src="ame-logo-circle.png" alt="">
+      <span>AME Consulting</span>
+    </div>
+    <h1>Leadership. Strategy.<br><span class="accent">Culture that holds.</span></h1>
+    <p class="sub"><b>Aileen M. Edwards</b>, MA, ACC &nbsp;·&nbsp; Former CHRO<br>Executive Coaching · Leadership Development · Speaking</p>
+  </div>
+
+  <div class="site">ameconsulting.ca</div>
+
+  <div class="arch-ring"></div>
+  <div class="arch"><img src="aileen-headshot-blazer.jpg" alt=""></div>
+</body>
+</html>
