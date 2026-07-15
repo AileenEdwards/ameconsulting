@@ -1,0 +1,182 @@
+/* ============================================================
+   AME CONSULTING — V10 · color themes + preview switcher
+   Each block overrides only the RGB triplets defined in v10.css.
+   No data-theme attribute = original "Midnight" palette.
+   Palette source (brand): #554A5B #675470 #9C87A7 #DCD1DF
+   #2D2D2D #F2F2F2 #E8E8E8 #8B2346 (+ tints #A63A5F #CFC3D4 #E0D8E4)
+   ============================================================ */
+
+/* ---------- 2. Brand Classic — Aileen's mapping, verbatim ---------- */
+[data-theme="classic"] {
+  --c-obsidian: 85 74 91;      /* #554A5B background */
+  --c-onyx: 45 45 45;          /* #2D2D2D content panels */
+  --c-graphite: 103 84 112;    /* #675470 glass / forms */
+  --c-nav: 103 84 112;         /* #675470 header bar */
+  --c-gold: 220 209 223;       /* #DCD1DF accent */
+  --c-gold-light: 255 255 255;
+  --c-on-accent: 45 45 45;
+  --c-purple: 156 135 167;     /* #9C87A7 decorative only */
+  --c-purple-light: 220 209 223;
+  --c-cream: 242 242 242;      /* #F2F2F2 text */
+  --c-cream-dark: 232 232 232;
+  --c-silver: 232 232 232;
+  --c-ash: 207 195 212;        /* #CFC3D4 muted */
+  --c-plum: 139 35 70;         /* #8B2346 burgundy hero warmth */
+  --c-line: 242 242 242;
+}
+
+/* ---------- 3. Heather — mid mauve, header colour as canvas ---------- */
+[data-theme="heather"] {
+  --c-obsidian: 103 84 112;    /* #675470 background */
+  --c-onyx: 85 74 91;          /* #554A5B cards */
+  --c-graphite: 85 74 91;
+  --c-nav: 85 74 91;
+  --c-gold: 220 209 223;       /* #DCD1DF accent */
+  --c-gold-light: 255 255 255;
+  --c-on-accent: 45 45 45;
+  --c-purple: 156 135 167;
+  --c-purple-light: 220 209 223;
+  --c-cream: 242 242 242;
+  --c-cream-dark: 232 232 232;
+  --c-silver: 232 232 232;
+  --c-ash: 224 216 228;        /* #E0D8E4 muted */
+  --c-plum: 139 35 70;
+  --c-line: 242 242 242;
+}
+
+/* ---------- 4. Porcelain — off-white + burgundy, lightest ---------- */
+[data-theme="porcelain"] {
+  --c-obsidian: 242 242 242;   /* #F2F2F2 background */
+  --c-onyx: 255 255 255;       /* white cards */
+  --c-graphite: 232 232 232;   /* #E8E8E8 glass / forms */
+  --c-nav: 242 242 242;
+  --c-gold: 139 35 70;         /* #8B2346 burgundy accent */
+  --c-gold-light: 166 58 95;   /* #A63A5F hover */
+  --c-on-accent: 242 242 242;
+  --c-purple: 103 84 112;      /* #675470 */
+  --c-purple-light: 85 74 91;  /* #554A5B */
+  --c-cream: 45 45 45;         /* #2D2D2D text */
+  --c-cream-dark: 35 35 35;
+  --c-silver: 85 74 91;
+  --c-ash: 103 84 112;
+  --c-plum: 220 209 223;       /* #DCD1DF hero field */
+  --c-line: 45 45 45;
+  --hero-purple-a: 0.18;
+  --hero-gold-a: 0.10;
+}
+
+/* ---------- 5. Lavender Mist — #DCD1DF canvas + burgundy ---------- */
+[data-theme="lavender"] {
+  --c-obsidian: 220 209 223;   /* #DCD1DF background */
+  --c-onyx: 242 242 242;       /* #F2F2F2 cards */
+  --c-graphite: 232 232 232;
+  --c-nav: 220 209 223;
+  --c-gold: 139 35 70;         /* #8B2346 burgundy accent */
+  --c-gold-light: 166 58 95;
+  --c-on-accent: 242 242 242;
+  --c-purple: 85 74 91;
+  --c-purple-light: 103 84 112;
+  --c-cream: 45 45 45;
+  --c-cream-dark: 35 35 35;
+  --c-silver: 85 74 91;
+  --c-ash: 103 84 112;
+  --c-plum: 156 135 167;       /* #9C87A7 hero field */
+  --c-line: 85 74 91;
+  --hero-purple-a: 0.18;
+  --hero-gold-a: 0.10;
+}
+
+/* ---------- 6. Dove Grey — neutral grey + mauve, no burgundy ---------- */
+[data-theme="dove"] {
+  --c-obsidian: 232 232 232;   /* #E8E8E8 background */
+  --c-onyx: 255 255 255;
+  --c-graphite: 220 209 223;   /* lavender glass */
+  --c-nav: 232 232 232;
+  --c-gold: 103 84 112;        /* #675470 mauve accent */
+  --c-gold-light: 85 74 91;
+  --c-on-accent: 242 242 242;
+  --c-purple: 139 35 70;
+  --c-purple-light: 139 35 70;
+  --c-cream: 45 45 45;
+  --c-cream-dark: 35 35 35;
+  --c-silver: 85 74 91;
+  --c-ash: 103 84 112;
+  --c-plum: 220 209 223;
+  --c-line: 45 45 45;
+  --hero-purple-a: 0.18;
+  --hero-gold-a: 0.10;
+}
+
+/* ---------- 7. Pearl — pure white + mauve, burgundy hero ---------- */
+[data-theme="pearl"] {
+  --c-obsidian: 255 255 255;   /* white background */
+  --c-onyx: 242 242 242;
+  --c-graphite: 232 232 232;
+  --c-nav: 255 255 255;
+  --c-gold: 103 84 112;        /* #675470 mauve accent */
+  --c-gold-light: 85 74 91;
+  --c-on-accent: 242 242 242;
+  --c-purple: 139 35 70;       /* #8B2346 */
+  --c-purple-light: 166 58 95;
+  --c-cream: 45 45 45;
+  --c-cream-dark: 35 35 35;
+  --c-silver: 85 74 91;
+  --c-ash: 103 84 112;
+  --c-plum: 220 209 223;
+  --c-line: 45 45 45;
+  --hero-purple-a: 0.18;
+  --hero-gold-a: 0.10;
+}
+
+/* ============================================================
+   Theme switcher (preview widget — remove with js/theme.js
+   once a palette is chosen)
+   ============================================================ */
+.theme-switcher {
+  position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 9990;
+  font-family: 'Sora', system-ui, sans-serif;
+}
+.theme-switcher__toggle {
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--onyx); color: var(--gold);
+  border: 1px solid rgb(var(--c-line) / 0.18);
+  box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.45);
+  cursor: pointer; transition: transform .3s var(--ease-out-expo), border-color .3s;
+}
+.theme-switcher__toggle:hover { transform: scale(1.06); border-color: rgb(var(--c-gold) / 0.6); }
+.theme-switcher__toggle svg { width: 22px; height: 22px; }
+.theme-switcher__panel {
+  position: absolute; bottom: 64px; right: 0; min-width: 232px;
+  background: var(--onyx); border: 1px solid rgb(var(--c-line) / 0.14);
+  border-radius: 16px; padding: .5rem;
+  box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.5);
+}
+.theme-switcher__panel[hidden] { display: none; }
+.theme-switcher__label {
+  font-size: .62rem; letter-spacing: .24em; text-transform: uppercase;
+  color: var(--ash); padding: .5rem .75rem .35rem;
+}
+.theme-switcher__option {
+  display: flex; align-items: center; gap: .65rem; width: 100%;
+  padding: .55rem .75rem; border-radius: 10px; cursor: pointer;
+  background: transparent; border: 0; text-align: left;
+  font-size: .82rem; color: var(--cream);
+  transition: background-color .25s;
+}
+.theme-switcher__option:hover { background: rgb(var(--c-graphite) / 0.5); }
+.theme-switcher__option[aria-pressed="true"] { background: rgb(var(--c-graphite) / 0.65); }
+.theme-switcher__swatch {
+  display: inline-flex; border-radius: 999px; overflow: hidden;
+  border: 1px solid rgb(var(--c-line) / 0.25); flex: none;
+}
+.theme-switcher__swatch i { display: block; width: 11px; height: 22px; }
+.theme-switcher__check {
+  margin-left: auto; width: 14px; height: 14px; color: var(--gold);
+  opacity: 0; transition: opacity .2s;
+}
+.theme-switcher__option[aria-pressed="true"] .theme-switcher__check { opacity: 1; }
+@media (max-width: 480px) {
+  .theme-switcher { bottom: 1rem; right: 1rem; }
+  .theme-switcher__toggle { width: 46px; height: 46px; }
+}
