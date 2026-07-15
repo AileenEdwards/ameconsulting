@@ -23,7 +23,7 @@ if (!canvas || reduced) {
   }
 }
 
-/* Palette comes from the CSS RGB-triplet variables (see v10.css :root
+/* Palette comes from the CSS RGB-triplet variables (see site.css :root
    and themes.css) so the shader follows the active colour theme. */
 function cssColor(name) {
   const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim().split(/\s+/).map(Number);
