@@ -6,23 +6,27 @@
 
 :root {
   /* RGB triplets are the single source of truth so Tailwind opacity
-     modifiers (bg-onyx/40 etc.) and theme overrides both work. Themes
-     in themes.css override only these. */
-  --c-obsidian: 26 21 32;      /* page background */
-  --c-onyx: 35 30 40;          /* cards / section bands */
-  --c-graphite: 45 39 53;      /* glass panels, form fields */
-  --c-gold: 200 169 81;        /* primary accent */
-  --c-gold-light: 212 186 106; /* accent hover */
-  --c-purple: 151 130 161;     /* decorative gradients + hero shader */
-  --c-purple-light: 169 149 179;
-  --c-cream: 250 247 242;      /* primary text */
-  --c-cream-dark: 240 235 225;
-  --c-silver: 168 168 168;     /* secondary text */
-  --c-ash: 107 107 107;        /* muted text */
-  --c-plum: 58 44 69;          /* hero shader mid-tone */
-  --c-line: 250 247 242;       /* hairline borders (incl. Tailwind `white`) */
-  --c-nav: 26 21 32;           /* solid nav bar background */
-  --c-on-accent: 26 21 32;     /* text sitting on the accent color */
+     modifiers (bg-onyx/40 etc.) work. Palette: "Porcelain" — brand
+     off-white + burgundy, chosen by Aileen 2026-07.
+     Brand hexes: #F2F2F2 #E8E8E8 #8B2346 #A63A5F #675470 #554A5B
+     #2D2D2D #DCD1DF */
+  --c-obsidian: 242 242 242;   /* page background  #F2F2F2 */
+  --c-onyx: 255 255 255;       /* cards / section bands (white) */
+  --c-graphite: 232 232 232;   /* glass panels, form fields  #E8E8E8 */
+  --c-gold: 139 35 70;         /* primary accent  #8B2346 burgundy */
+  --c-gold-light: 166 58 95;   /* accent hover  #A63A5F */
+  --c-purple: 103 84 112;      /* decorative gradients + hero shader  #675470 */
+  --c-purple-light: 85 74 91;  /* #554A5B */
+  --c-cream: 45 45 45;         /* primary text  #2D2D2D */
+  --c-cream-dark: 35 35 35;
+  --c-silver: 85 74 91;        /* secondary text  #554A5B */
+  --c-ash: 103 84 112;         /* muted text  #675470 */
+  --c-plum: 220 209 223;       /* hero shader mid-tone  #DCD1DF */
+  --c-line: 45 45 45;          /* hairline borders (incl. Tailwind `white`) */
+  --c-nav: 242 242 242;        /* solid nav bar background */
+  --c-on-accent: 242 242 242;  /* text sitting on the accent color */
+  --hero-purple-a: 0.18;       /* hero fallback glow strengths (light bg) */
+  --hero-gold-a: 0.10;
 
   --obsidian: rgb(var(--c-obsidian));
   --onyx: rgb(var(--c-onyx));
